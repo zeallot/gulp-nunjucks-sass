@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block link %}
+    {% endblock %}
+    {% block title %}
+    {% endblock %}
+</head>
+<body>
+<div class="global_wrapper">
+    {% block main %}
+    {% endblock %}
+</div>
+{% block script %}
+{% endblock %}
+<script type="text/javascript" src="./js/main-min.js"></script>
+</body>
+</html>

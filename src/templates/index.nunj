@@ -1,0 +1,16 @@
+{% extends 'layout.nunj' %}
+
+{% block title %}
+    <title>Welcome!</title>
+{% endblock %}
+
+{% block link %}
+{% endblock %}
+
+
+{% block main %}
+  <h1>d;laksdl;sa</h1>
+{% endblock %}
+
+{% block script %}
+{% endblock %}
