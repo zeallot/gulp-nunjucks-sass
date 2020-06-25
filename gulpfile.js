@@ -46,7 +46,7 @@ const pages = [
 
 function buildScss() {
     return gulp.src(srcDir('/sass/style.scss'))
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
