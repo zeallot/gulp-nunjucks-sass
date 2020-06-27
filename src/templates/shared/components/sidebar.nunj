@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <div class="sidebar__content">
+        <ul class="sidebar__list">
+            <li>
+                <a class="sidebar__link {% if activePage == "index" %} sidebar__link--active {% endif %}" href="./index.html">
+                    Index
+                </a>
+            </li>
+            <li>
+                <a class="sidebar__link {% if activePage == "about-us" %} sidebar__link--active {% endif %}" href="./about-us.html">
+                    About us
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

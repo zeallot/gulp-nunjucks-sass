@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+  color: $main-color;
+}
+
+
+// components
+@import './components/buttons.scss';
+@import './components/input.scss';
+@import './components/sidebar.scss';
+
+
+// pages
+@import './pages/index.scss';
+@import './pages/about-us.scss';
+

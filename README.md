@@ -3,13 +3,14 @@
 
 This is the template for starting projects on the [Nunjucks](https://mozilla.github.io/nunjucks/) + [SASS](https://sass-lang.com/) engine.
 
-How to use: install packages `yarn` or `npm i`.
+How to use: install packages `yarn` or `npm i`. Then:
 
-Default task:
-- `yarn satrt` - launches the default task, starts the server on [localhost:3000](https://localhost:3000), monitors changes and automatically reloads the page in the browser.
+**Default task**:
+- `yarn start` - launches the default task, starts the server on [localhost:3000](https://localhost:3000), monitors changes and automatically reloads the page in the browser.
 - `yarn build` - Makes a build. 
 
-I use this file structure: 
+**File structure:** 
+>I use such a structure, you can use another
 
 ```
 start-nunj-project/
@@ -23,10 +24,10 @@ start-nunj-project/
 |  |——img/
 |  |——js/
 |  |——sass/                                 --styles
-|  |  |——shared-components/
+|  |  |——components/
 |  |  |  |——button.scss
 |  |  |  |——input.scss
-|  |  |  |——bread-crumbs.scss
+|  |  |  |——sidebar.scss
 |  |  |——pages/
 |  |  |  |——about-us.scss
 |  |  |  |——index.scss
@@ -39,7 +40,7 @@ start-nunj-project/
 |  |    |  |  |——footer.nunj
 |  |    |  |  |——sidebar.nunj
 |  |    |  |——macro/                        -- macro nunj
-|  |    |——template-pages/
+|  |    |——template-pages/                  -- here the main code of the pages
 |  |    |  |——about-us/
 |  |    |  |  |——components/
 |  |    |  |  |  |——features-table.nunj
@@ -49,12 +50,26 @@ start-nunj-project/
 |  |    |  |  |——components/
 |  |    |  |  |  |——mail-modal.nunj/
 |  |    |  |  |——index-template.nunj
-|  |    |——index.nunj/
-|  |    |——about-us.nunj/
-|  |    |——layout.nunj/
+|  |    |——index.nunj/                      -- here are the individual page settings it's will be .html file
+|  |    |——about-us.nunj/                   -- here are the individual page settings it's will be .html file
+|  |    |——layout.nunj/                     -- here is the standard template for all pages
 |——package.json
 |——package-lock.json
 |——gulpfile.json
 |——README.md         --you here
 ```
-It's just example. You can use another structure !!! (TODO: REWRITE)
+
+In order for the pages to get into the build, you need to list the paths to them in the **page** array `./gulpfile.js`
+
+```javascript
+const pages = [
+    'src/templates/index.nunj',
+    'src/templates/about-us.nunj',
+];
+```
+
+**More:**
+
+In a webstorm (v2020.1.2, Date: 27 June 2020), I had a problem. IDEA did not support nunjuck syntax. I solved it like this:
+- go to _Settings > Plugins > install "Twig"_
+- _Settings > Editor > File Types > Find "Twig" > Add Registered Patterns "*.nunj"_

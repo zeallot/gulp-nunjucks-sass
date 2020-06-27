@@ -41,11 +41,12 @@ function srcDir(childPath = '/') {
 }
 
 const pages = [
-    'src/templates/index.nunj'
+    'src/templates/index.nunj',
+    'src/templates/about-us.nunj',
 ];
 
 function buildScss() {
-    return gulp.src(srcDir('/sass/style.scss'))
+    return gulp.src(srcDir('/sass/styles.scss'))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
@@ -116,7 +117,6 @@ gulp.task('watch', function () {
             baseDir: buildDir(),
             index: 'index.html',
         },
-        tunnel: false
     });
 
     gulp.watch(srcDir('/templates/**/*'), gulp.series('nunj:build'));
