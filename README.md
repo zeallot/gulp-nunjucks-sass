@@ -13,7 +13,7 @@ How to use: install packages `yarn` or `npm i`. Then:
 >I use such a structure, you can use another
 
 ```
-start-nunj-project/
+gulp-nunjucks-sass/
 |——node_modules
 |——public/                                 --builded project 
 |  |——css/
