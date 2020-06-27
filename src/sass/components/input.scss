@@ -1,0 +1,21 @@
+input {
+  padding: 6px 10px;
+  border-style: solid;
+  border-color: $light-gray-color;
+  border-width: 1px;
+  border-radius: 2px;
+  font-size: 12px;
+
+  &:focus, &:active {
+    overflow: hidden;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    color: $light-gray-color;
+  }
+
+  &:disabled {
+    background-color: #F3F5F8;
+  }
+}

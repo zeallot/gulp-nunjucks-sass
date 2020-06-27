@@ -1,5 +1,5 @@
 {% extends 'layout.nunj' %}
-{% set activePage="index" %}
+{% set activePage="about-us" %}
 
 {% block title %}
     <title>Hello!</title>
@@ -11,7 +11,7 @@
 
 {% block main %}
     {% include './shared/components/sidebar.nunj' %}
-    {% include './template-pages/index/index-template.nunj' %}
+    {% include './template-pages/about-us/about-us-template.nunj' %}
 {% endblock %}
 
 {% block script %}
