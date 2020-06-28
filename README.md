@@ -1,7 +1,7 @@
 # Starting [gulp](https://gulpjs.com/) - [nunjuck](https://mozilla.github.io/nunjucks/) - [sass](https://sass-lang.com/) template
 > Render Nunjucks + SASS templates
 
-**Description:** This is the template for starting projects on the [Nunjucks](https://mozilla.github.io/nunjucks/) + [SASS](https://sass-lang.com/) engine.
+This is the template for starting projects on the [Nunjucks](https://mozilla.github.io/nunjucks/) + [SASS](https://sass-lang.com/) engine.
 
 How to use: install packages `yarn` or `npm i`. Then:
 
